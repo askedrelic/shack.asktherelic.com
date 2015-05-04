@@ -11,7 +11,7 @@ if($username != "" && $dob != "") {
     $username = trim(strip_tags($username));
     $dob = trim(strip_tags($dob));
 
-    $dbh= mysql_connect("", "shack", "shack") or die ("Woops. Something is broken.");
+    $dbh= mysql_connect(getenv('MYSQL_PORT_3306_TCP_ADDR'), "admin", "shack") or die ("Woops. Something is broken.");
     mysql_select_db ("shack");
 
     $query = "SELECT * FROM birthdays where username = '{$username}';";
