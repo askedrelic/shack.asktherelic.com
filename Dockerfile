@@ -11,17 +11,21 @@ EXPOSE 3000
 RUN apt-get update
 RUN apt-get -y upgrade
 
-# nginx?
-RUN apt-get -y install nginx
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-RUN mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-COPY default /etc/nginx/sites-available/default
-
 # nice to have programs
-RUN apt-get -y install curl git vim software-properties-common
+RUN apt-get -y install curl
+RUN apt-get -y install git vim
+RUN apt-get -y install software-properties-common
+
 # required to run the script
 RUN apt-get -y install php5 php5-fpm php5-mysql php5-curl mysql-client
 RUN sed -i s/\;cgi\.fix_pathinfo\s*\=\s*1/cgi.fix_pathinfo\=0/ /etc/php5/fpm/php.ini
+
+# nginx?
+RUN apt-get -y install nginx
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+RUN echo "env MYSQL_PORT_3306_TCP_ADDR;" >> /etc/nginx/nginx.conf
+RUN mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+COPY default /etc/nginx/sites-available/default
 
 # add all required files in /data/
 ADD ./*.php /data/
