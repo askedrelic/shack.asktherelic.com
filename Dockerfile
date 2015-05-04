@@ -33,8 +33,8 @@ COPY default /etc/nginx/sites-available/default
 # add all required files in /data/
 ADD ./*.php /usr/share/nginx/html/
 ADD ./*.css /usr/share/nginx/html/
-ADD ./css/ /usr/share/nginx/html/
-ADD ./images/ /usr/share/nginx/html/
+ADD ./css/ /usr/share/nginx/html/css/
+ADD ./images/ /usr/share/nginx/html/images/
 
 ADD ./CHECKS /app/CHECKS
 CMD service php5-fpm start && nginx
