@@ -69,7 +69,7 @@ if($username != "" && $dob != "") {
 <br /><br />
 <p>If you want to update your birthday or have problems, <a href="http://www.shacknews.com/msgcenter/new_message.x?to=askedrelic">shackmessage me</a>!<p>
 <br /><br />
-<h3><a href="shack.asktherelic.com">Go Back</a></h3>
+<h3><a href="/">Go Back</a></h3>
 </div>
 
 <?= getFooter(false) ?>
