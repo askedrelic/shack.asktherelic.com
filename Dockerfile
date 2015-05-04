@@ -34,4 +34,5 @@ COPY default /etc/nginx/sites-available/default
 ADD ./*.php /usr/share/nginx/html/
 ADD ./*.css /usr/share/nginx/html/
 
+ADD ./CHECKS /CHECKS
 CMD service php5-fpm start && nginx
