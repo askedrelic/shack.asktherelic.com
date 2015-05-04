@@ -1,3 +1,5 @@
+<?php include "../global.php"; ?>
+
 <?php
 
 $username = $_POST['Username'];
@@ -28,6 +30,7 @@ if($username != "" && $dob != "") {
 
 ?>
 
+<?= getHeader("Shack Birthdays") ?>
 
 <script type="text/javascript">
     $(document).ready(function(){
@@ -68,3 +71,5 @@ if($username != "" && $dob != "") {
 <br /><br />
 <h3><a href="shack.asktherelic.com">Go Back</a></h3>
 </div>
+
+<?= getFooter(false) ?>
