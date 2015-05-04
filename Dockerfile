@@ -28,11 +28,10 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
 COPY default /etc/nginx/sites-available/default
 
-# add all required files in /data/
-ADD ./*.php /data/
 
-RUN echo "<?php phpinfo(); ?>" > /usr/share/nginx/html/info.php
-ADD ./wall.php /usr/share/nginx/html/wall.php
-ADD ./index.php /usr/share/nginx/html/index.php
+# RUN echo "<?php phpinfo(); ?>" > /usr/share/nginx/html/info.php
+# add all required files in /data/
+ADD ./*.php /usr/share/nginx/html/
+ADD ./*.css /usr/share/nginx/html/
 
 CMD service php5-fpm start && nginx
