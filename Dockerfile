@@ -24,7 +24,7 @@ RUN sed -i 's/variables_order\s*=\s*"GPCS"/variables_order="EGPCS"/' /etc/php5/f
 # nginx?
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 # assuming 'mysql' app is linked on 3306
-RUN echo "env MYSQL_PORT_3306_TCP_ADDR;" >> /etc/nginx/nginx.conf
+# RUN echo "env MYSQL_PORT_3306_TCP_ADDR;" >> /etc/nginx/nginx.conf
 RUN mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
 COPY default /etc/nginx/sites-available/default
 
