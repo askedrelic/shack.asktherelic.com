@@ -21,10 +21,10 @@ RUN apt-get -y install curl \
 RUN sed -i s/\;cgi\.fix_pathinfo\s*\=\s*1/cgi.fix_pathinfo\=0/ /etc/php5/fpm/php.ini
 RUN sed -i 's/variables_order\s*=\s*"GPCS"/variables_order="EGPCS"/' /etc/php5/fpm/php.ini
 
-# nginx?
+# nginx config
+RUN sed -i -e"s/keepalive_timeout\s*65/keepalive_timeout 2/" /etc/nginx/nginx.conf
+RUN sed -i -e"s/worker_processes\s*4/worker_processes 2/" /etc/nginx/nginx.conf
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-# assuming 'mysql' app is linked on 3306
-# RUN echo "env MYSQL_PORT_3306_TCP_ADDR;" >> /etc/nginx/nginx.conf
 RUN mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
 COPY default /etc/nginx/sites-available/default
 

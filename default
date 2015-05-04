@@ -2,7 +2,7 @@ server {
         listen 3000 default_server;
 
         root /usr/share/nginx/html;
-        index index.php index.html index.htm;
+        index index.php;
 
         server_name localhost;
 
