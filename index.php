@@ -3,13 +3,15 @@
 $username = $_POST['Username'];
 $dob = $_POST['Dateofbirth'];
 
+$posted = false;
+$exists = false;
 if($username != "" && $dob != "") {
     $posted = true;
 
     $username = trim(strip_tags($username));
     $dob = trim(strip_tags($dob));
 
-    $dbh=mysql_connect ("localhost", "shack", "shack") or die ("Woops. Something is broken.");
+    $dbh= mysql_connect("", "shack", "shack") or die ("Woops. Something is broken.");
     mysql_select_db ("shack");
 
     $query = "SELECT * FROM birthdays where username = '{$username}';";
