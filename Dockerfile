@@ -29,3 +29,5 @@ ADD ./*.php /data/
 RUN echo "<?php phpinfo(); ?>" > /usr/share/nginx/html/info.php
 ADD ./wall.php /usr/share/nginx/html/wall.php
 ADD ./index.php /usr/share/nginx/html/index.php
+
+CMD service php5-fpm start && nginx
