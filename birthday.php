@@ -4,7 +4,6 @@
 
 $username = $_POST['Username'];
 $dob = $_POST['Dateofbirth'];
-$dbh= mysql_connect(getenv('DB_HOST'), getenv("DB_USER"), getenv("DB_PASS")) or die ("Woops. Something is broken.");
 
 $posted = false;
 $exists = false;
@@ -14,7 +13,7 @@ if($username != "" && $dob != "") {
     $username = trim(strip_tags($username));
     $dob = trim(strip_tags($dob));
 
-    $dbh= mysql_connect(getenv('DB_HOST'), getenv("DB_USER"), getenv("DB_PASS")) or die ("Woops. Something is broken.");
+    $dbh= mysql_connect('mariadb', 'shack', '824aabd9e5ea4a578ef8ca75e6b4b4496a73a6cbc8ba376ba2d4996d05b2e998') or die ("Woops. Something is broken.");
     mysql_select_db ("shack");
 
     $query = "SELECT * FROM birthdays where username = '{$username}';";
