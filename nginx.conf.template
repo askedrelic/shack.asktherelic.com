@@ -1,11 +1,11 @@
 server {
+  listen      [::]:80;
   listen      80;
-  server_name shack.asktherelic.com default;
+  server_name shack.asktherelic.com;
   access_log  /var/log/nginx/${APP}-access.log;
   error_log   /var/log/nginx/${APP}-error.log;
 
   location    / {
-
     gzip on;
     gzip_min_length  1100;
     gzip_buffers  4 32k;
