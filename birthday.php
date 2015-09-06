@@ -13,7 +13,7 @@ if($username != "" && $dob != "") {
     $username = trim(strip_tags($username));
     $dob = trim(strip_tags($dob));
 
-    $dbh= mysql_connect('mariadb', 'shack', '824aabd9e5ea4a578ef8ca75e6b4b4496a73a6cbc8ba376ba2d4996d05b2e998') or die ("Woops. Something is broken.");
+    $dbh= mysql_connect('mariadb', 'shack', '59d5e1d30a9057b5f094604b7c158c4f5f0bb7282300dbe2d7b6da3a5649a9a2') or die ("Woops. Something is broken.");
     mysql_select_db ("shack");
 
     $query = "SELECT * FROM birthdays where username = '{$username}';";
