@@ -20,6 +20,7 @@ RUN apt-get -y install curl \
 # required to run the script
 RUN sed -i s/\;cgi\.fix_pathinfo\s*\=\s*1/cgi.fix_pathinfo\=0/ /etc/php5/fpm/php.ini
 RUN sed -i 's/variables_order\s*=\s*"GPCS"/variables_order="EGPCS"/' /etc/php5/fpm/php.ini
+RUN echo 'env[DB_USER] = $DB_USER' >> /etc/php5/fpm/pool.d/www.conf
 
 # nginx config
 ADD nginx.conf /etc/nginx/nginx.conf
