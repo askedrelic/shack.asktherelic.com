@@ -36,5 +36,4 @@ ADD ./css/ /usr/share/nginx/html/css/
 ADD ./images/ /usr/share/nginx/html/images/
 
 ADD ./CHECKS /app/CHECKS
-ENV DB_USER mariadb
 CMD service php5-fpm start && nginx
