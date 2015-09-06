@@ -1,6 +1,6 @@
 server {
   listen      80 default_server;
-  server_name shack.asktherelic.com;
+  server_name $NOSSL_SERVER_NAME;
   access_log  /var/log/nginx/${APP}-access.log;
   error_log   /var/log/nginx/${APP}-error.log;
 
