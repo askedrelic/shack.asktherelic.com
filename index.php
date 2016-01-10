@@ -5,9 +5,9 @@
 <h2>Shacknews Projects</h2>
 <ul class="unlisted">
     <li class="listed">
-    <h3><a href="today.php">Today Is</a></h3>
+    <h3><a href="today.php">TodayIs</a></h3>
     <p>July 2008</p>
-    <p>Source code and API for my Today Is posts on the shack.</p>
+    <p>Source for my TodayIs posts on Shacknews.</p>
     </li>
 
     <li class="listed">

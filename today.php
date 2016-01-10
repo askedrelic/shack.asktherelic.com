@@ -3,15 +3,21 @@
 <?= getHeader("Today Is API") ?>
 
 <div class="section">
-<h2>Today Is API</h2>
-<p>I post a bunch of stats about the current day</p> 
-<p>The location of the latest Today Is post: <a href="http://www.shacknews.com/laryn.x?id=<?php echo file_get_contents("./todayis.txt"); ?>"> http://www.shacknews.com/laryn.x?id=<?php echo file_get_contents("./todayis.txt"); ?> </a>
-<br /><br />
-<p>Today Is is posted every day at 2PM EST, then the location of this txt file is updated with the latest post id: <a href="http://asktherelic.com/shack/todayis.txt">http://asktherelic.com/shack/todayis.txt</a></p>
 
+<h2>TodayIs</h2>
+
+<p>I post "interesting" information about yesterday and today.</p>
 <br /><br />
-<p>Any questions about things, <a href="http://www.shacknews.com/msgcenter/new_message.x?to=askedrelic">shackmessage me</a>!<p>
+
+<p>TodayIs is posted every day at 1PM EST.</p>
 <br /><br />
+
+<p>All the source is on github, additions are welcome, <a href="https://github.com/askedrelic/todayis">https://github.com/askedrelic/todayis</a></p>
+<br /><br />
+
+<p>For any questions, <a href="http://www.shacknews.com/msgcenter/new_message.x?to=askedrelic">shackmessage me</a>!<p>
+<br /><br />
+
 <h3><a href="/">Go Back</a></h3>
 </div>
 
