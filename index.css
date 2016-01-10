@@ -28,7 +28,8 @@ div#container {
     margin: 0 auto;
     width: 780px;
     height: 100%;
-    border: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     border-top: none;
     text-align: left;
 }
@@ -50,7 +51,7 @@ div.hidden-section {
 }
 
 a:link, a:visited, a:active {
-    color: #ACD1E9;
+    color: #317DDA;
     text-decoration: none;
 }
 
