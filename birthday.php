@@ -55,20 +55,29 @@ if($username != "" && $dob != "") {
 <p style="color:green;">All good, your info has been saved!</p>
 <?php } ?>
 <form action="" id="birthdayForm" method="post">
+
 <h2>Birthday DB</h2>
+
 <p>This will enter you into the database, if you aren't already in here.</p>
+<br>
+
 <p>Please use YYYY-MM-DD format for the date or use the calendar icon.</p>
+<br>
+
 <p>Don't want to reveal your exact birthyear? Just enter 1900 for the year instead, but keep the formatting correct!<p>
-<br/>
+<br>
+
 <p>Username: <input type="text" name="Username" /></p>
-<p>DOB: <input type="text" style="margin-left:39px" name="Dateofbirth" id="datepicker" />
-</br>
-</p>
+<p>DOB: <input type="text" style="margin-left:39px" name="Dateofbirth" id="datepicker" /></p>
+<br>
+
 <p><input type="submit" value="OMGHB2U!!! (Submit)"/></p>
 </form>
-<br /><br />
-<p>If you want to update your birthday or have problems, <a href="http://www.shacknews.com/msgcenter/new_message.x?to=askedrelic">shackmessage me</a>!<p>
-<br /><br />
+<br>
+
+<p>If you want to update your birthday, remove your birthday, or have any questions, please <a href="http://www.shacknews.com/msgcenter/new_message.x?to=askedrelic">shackmessage me</a>!<p>
+<br>
+
 <h3><a href="/">Go Back</a></h3>
 </div>
 
