@@ -1,111 +1,112 @@
-html { /* Force Vertical Scrollbar */
-        /* IE */
-        overflow-y: scroll;
-        /* Moz */
-        height: 100%;
-        margin-bottom: 0.1em;
+html {
+    /* Force Vertical Scrollbar */
+    /* IE */
+    overflow-y: scroll;
+    /* Moz */
+    height: 100%;
 }
 
 * {
-        padding: 0;
-        margin: 0;
-        }
+    padding: 0;
+    margin: 0;
+}
 
 img {
-        border: 0;
-        }
+    border: 0;
+}
 
 body {
-	background: #EDEDED;
-	font: 14px Lucida, Lucida Grande, sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+    background: #EDEDED;
+    font: 14px Lucida, Lucida Grande, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 div#container {
-	background: #fff;
-	margin: 0 auto;
-  	width: 780px;
-        border: 1px solid #ddd;
-        border-top: none;
-	text-align: left;
+    background: #fff;
+    margin: 0 auto;
+    width: 780px;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-top: none;
+    text-align: left;
 }
 
 div#header {
-	text-align: center;
+    text-align: center;
 }
 
 div.section {
-        clear: both;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 2em;
-        padding-bottom: 2em;
+    clear: both;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 div.hidden-section {
-        display: none;
+    display: none;
 }
 
 a:link, a:visited, a:active {
-	color: #ACD1E9;
-	text-decoration: none;
+    color: #ACD1E9;
+    text-decoration: none;
 }
 
 a:hover {
-	color: #000;
-	text-decoration: underline;
+    color: #000;
+    text-decoration: underline;
 }
 
 
 h1, h2, h3 {
-	margin: 0;
-	font-weight: normal;
+    margin: 0;
+    font-weight: normal;
 }
 
 h1 {
-	font-size: 72px;
+    font-size: 72px;
 }
 
 h2 {
-	font-size: 38px;
+    font-size: 38px;
 }
 
 h3 {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 
 .left {
-width:33%;
-float:left;
-display:block;
+    width:33%;
+    float:left;
+    display:block;
 }
 
 .middle {
-width:33%;
-float:left;
-display:block;
+    width:33%;
+    float:left;
+    display:block;
 }
 
 .right {
-width:32%;
-float:left;
-display:block;
+    width:32%;
+    float:left;
+    display:block;
 }
 
 .unlisted {
-	margin: 0;
-	padding: 1em;
-	list-style-type: none;
+    margin: 0;
+    padding: 1em;
+    list-style-type: none;
 }
 
 .listed {
-	clear: none;
-	margin: 0 0 0.5em 1em;
+    clear: none;
+    margin: 0 0 0.5em 1em;
 }
 
 p {
-	margin: 0;
+    margin: 0;
 }
