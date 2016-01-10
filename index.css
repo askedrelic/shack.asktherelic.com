@@ -40,8 +40,8 @@ div#header {
 
 div.section {
     clear: both;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -72,7 +72,6 @@ h1 {
 
 h2 {
     font-size: 38px;
-    margin-bottom: 12px;
 }
 
 h3 {
@@ -100,7 +99,7 @@ h3 {
 
 .unlisted {
     margin: 0;
-    padding: 1em;
+    padding: 1em 0 1em 0;
     list-style-type: none;
 }
 
