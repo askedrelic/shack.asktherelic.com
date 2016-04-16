@@ -1,7 +1,7 @@
 # force set the upstream to port 3000
 upstream {{ .APP }} {
 {{ range .DOKKU_APP_LISTENERS | split " " }}
-  server {{ . }}:3000;
+  server {{ . }};
 {{ end }}
 }
 

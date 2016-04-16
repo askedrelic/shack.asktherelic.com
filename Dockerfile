@@ -6,7 +6,6 @@ ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
-EXPOSE 3000
 
 RUN apt-get update
 RUN apt-get -y upgrade
@@ -38,4 +37,6 @@ ADD ./images/ /usr/share/nginx/html/images/
 ADD ./CHECKS /app/CHECKS
 ADD ./nginx.conf.template /app/
 ADD ./nginx.conf.sigil /app/
+
+EXPOSE 80
 CMD service php5-fpm start && nginx
