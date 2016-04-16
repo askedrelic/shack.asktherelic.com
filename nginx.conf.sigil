@@ -1,8 +1,10 @@
+# force set the upstream to port 3000
 upstream {{ .APP }} {
 {{ range .DOKKU_APP_LISTENERS | split " " }}
-  server {{ . }};
+  server {{ . }}:3000;
 {{ end }}
 }
+
 server {
   listen      [::]:{{ .NGINX_PORT }};
   listen      {{ .NGINX_PORT }};
