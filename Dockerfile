@@ -36,5 +36,6 @@ ADD ./css/ /usr/share/nginx/html/css/
 ADD ./images/ /usr/share/nginx/html/images/
 
 ADD ./CHECKS /app/CHECKS
-ADD ./nginx.conf.template /app/nginx.conf.template
+ADD ./nginx.conf.template /app/
+ADD ./nginx.conf.sigil /app/
 CMD service php5-fpm start && nginx
