@@ -13,18 +13,18 @@ if($username != "" && $dob != "") {
     $username = trim(strip_tags($username));
     $dob = trim(strip_tags($dob));
 
-    $dbh= mysql_connect('dokku-mariadb-shack', 'mariadb', '4f88376d7e38fc0d') or die ("Woops. Something is broken.");
+    $dbh= mysql_connect('dokku-mariadb-shack', 'mariadb', '4f88376d7e38fc0d') or die ("Woops. Something is broken. Please try again.");
     mysql_select_db ("shack");
 
     $query = "SELECT * FROM birthdays where username = '{$username}';";
-    $result = mysql_query($query) or die("Woops. Something is broken.");
+    $result = mysql_query($query) or die("Woops. Something is broken. Please try again.");
     $num = mysql_numrows($result);
     if($num > 0) {
         $exists = true;
     }
     else {
         $query = "INSERT INTO `shack`.`birthdays` (`username`, `dob`) VALUES ('{$username}','{$dob}')";
-        $result = mysql_query($query) or die("Woops. Something is broken.");
+        $result = mysql_query($query) or die("Woops. Something is broken. Please try again.");
     }
 }
 
@@ -50,9 +50,9 @@ if($username != "" && $dob != "") {
 
 <div class="section">
 <?php if ($posted === true && $exists === true) { ?>
-<p style="color:green;">Congrats, you are already in the database! Why are you entering yourself again?</p>
+<p style="color:green; font-size:24px;">Congrats, you are already in the database! Why are you entering yourself again?</p>
 <?php } else if($posted === true) { ?>
-<p style="color:green;">All good, your info has been saved!</p>
+<p style="color:green; font-size:24px;">All good, your info has been saved!</p>
 <?php } ?>
 <form action="" id="birthdayForm" method="post">
 
