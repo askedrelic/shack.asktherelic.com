@@ -41,5 +41,5 @@ ADD     ./images/ /usr/share/nginx/html/images/
 # Add checks for dokku
 ADD     ./CHECKS /app/CHECKS
 
-CMD     ["service", "php5-fpm", "start", "&&", "nginx"]
+CMD     service php5-fpm start && nginx
 EXPOSE  80
