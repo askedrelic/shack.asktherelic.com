@@ -13,7 +13,7 @@ if($username != "" && $dob != "") {
     $username = trim(strip_tags($username));
     $dob = trim(strip_tags($dob));
 
-    $dbh= mysql_connect('dokku-mariadb-shack', 'mariadb', '4f88376d7e38fc0d') or die ("Woops. Something is broken. Please try again.");
+    $dbh = mysql_connect('dokku-mariadb-shack', 'mariadb', '4f88376d7e38fc0d') or die ("Woops. Something is broken. Please try again.");
     mysql_select_db ("shack");
 
     $query = "SELECT * FROM birthdays where username = '{$username}';";
@@ -33,19 +33,19 @@ if($username != "" && $dob != "") {
 <?= getHeader("Shack Birthdays") ?>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('#datepicker').datepicker({
-                changeMonth: true,
-                changeYear: true,
-                dateFormat: 'yy-mm-dd',
-                yearRange: '1900:2016',
-                minDate: '-120Y',
-                maxDate: '+0D',
-                showOn: 'button',
-                buttonImage: 'css/calendar.gif',
-                buttonImageOnly: true
-        });
+$(document).ready(function(){
+    $('#datepicker').datepicker({
+        changeMonth: true,
+            changeYear: true,
+            dateFormat: 'yy-mm-dd',
+            yearRange: '1900:2016',
+            minDate: '-120Y',
+            maxDate: '+0D',
+            showOn: 'button',
+            buttonImage: 'css/calendar.gif',
+            buttonImageOnly: true
     });
+});
 </script>
 
 <div class="section">
