@@ -13,8 +13,8 @@ if($username != "" && $dob != "") {
     $username = trim(strip_tags($username));
     $dob = trim(strip_tags($dob));
 
-    $dbh = mysql_connect('dokku-mariadb-shack', 'mariadb', '4f88376d7e38fc0d') or die ("Woops. Something is broken. Please try again.");
-    mysql_select_db ("shack");
+    $dbh = mysql_connect('dokku-mariadb-shackdb', 'mariadb', '137e701c572a1610') or die ("Woops. Something is broken. Please try again.");
+    mysql_select_db ("shackdb");
 
     $query = "SELECT * FROM birthdays where username = '{$username}';";
     $result = mysql_query($query) or die("Woops. Something is broken. Please try again.");
@@ -23,7 +23,7 @@ if($username != "" && $dob != "") {
         $exists = true;
     }
     else {
-        $query = "INSERT INTO `shack`.`birthdays` (`username`, `dob`) VALUES ('{$username}','{$dob}')";
+        $query = "INSERT INTO birthdays (`username`, `dob`) VALUES ('{$username}','{$dob}')";
         $result = mysql_query($query) or die("Woops. Something is broken. Please try again.");
     }
 }
